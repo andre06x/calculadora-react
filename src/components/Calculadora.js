@@ -23,6 +23,7 @@ export default class Calc extends Component {
 
   igual = () =>{
     //eu sei que não precisa, fiz por roleplay ;-;
+        // eslint-disable-next-line no-eval
         let r = eval(this.state.calculo)
         this.setState({ resultado: r})
   }
@@ -47,6 +48,7 @@ export default class Calc extends Component {
 
         if(numero === "0" || numero === "1" || numero === "2" || numero === "3" || numero ==="4" || numero ==="5" || numero === "6" || numero === "7" || numero === "8" || numero === "9" || numero ===")"){
           try{
+                // eslint-disable-next-line no-eval
                 let r = eval(this.state.calculo)
                 this.setState({ resultado: r})
  
