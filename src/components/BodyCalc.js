@@ -1,8 +1,9 @@
 import React from 'react'
+import { Table, Resultado } from './stylesCalculadora'
 
 export default function Calcular({addNumberInput, state, addNumberButton, igual, clear }){
     return(
-        <table>
+        <Table>
            
         <BodyHead addNumberInput={addNumberInput}
                   state={state}
@@ -12,7 +13,7 @@ export default function Calcular({addNumberInput, state, addNumberButton, igual,
                   addNumberButton={addNumberButton} 
                   igual={igual}
         />
-        </table>
+        </Table>
     )
 }
 
@@ -24,11 +25,11 @@ function BodyHead({addNumberInput, state}){
             <input type="text" 
                    onChange={addNumberInput}
             />
-            <div className="resultado">
-            <span>
-                {state.resultado}
-            </span>
-            </div>
+            <Resultado >
+                 <span>
+                    {state.resultado}
+                 </span>
+            </Resultado>
         </th>
     </thead>
 

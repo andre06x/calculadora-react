@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import BodyCalc from './BodyCalc'
 
+import { Container } from './stylesCalculadora'
+
 export default class Calc extends Component {
 
     state = {
@@ -67,14 +69,14 @@ export default class Calc extends Component {
     render(){
         return(
 
-            <div className="container">
+            <Container >
                 <BodyCalc key ={this.key}
                           addNumberInput={this.addNumberInput}
                           state={this.state} 
                           addNumberButton={this.addNumberButton} 
                           igual={this.igual} 
                           clear={this.clear}/>
-            </div>       
+            </Container>       
         )
     }
 }
